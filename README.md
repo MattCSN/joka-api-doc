@@ -1,58 +1,56 @@
-# How to host Swagger API documentation with GitHub Pages
-[<img alt="The blog of Peter Evans: How to Host Swagger Documentation With Github Pages" title="View blog post" src="https://peterevans.dev/img/blog-published-badge.svg">](https://peterevans.dev/posts/how-to-host-swagger-docs-with-github-pages/)
+# Joka API Documentation
 
-This repository is a template for using the [Swagger UI](https://github.com/swagger-api/swagger-ui) to dynamically generate beautiful documentation for your API and host it for free with GitHub Pages.
+Welcome to the Joka API documentation repository! This repository contains the OpenAPI specification for the Joka API, which is used to manage and retrieve information about golf bags, clubs, and players. The API provides a comprehensive set of endpoints to interact with your golf equipment data.
 
-The template will periodically auto-update the Swagger UI dependency and create a pull request. See the [GitHub Actions workflow here](.github/workflows/update-swagger.yml).
+## Overview
 
-The example API specification used by this repository can be seen hosted at [https://peter-evans.github.io/swagger-github-pages](https://peter-evans.github.io/swagger-github-pages/).
+The Joka API allows you to perform the following operations:
 
-## Steps to use this template
+- **Manage Golf Bags**: Create, update, retrieve, and delete golf bags. Associate and manage clubs within bags.
+- **Manage Golf Clubs**: Create, update, retrieve, delete, and track usage statistics for golf clubs.
+- **Manage Players**: Create, update, retrieve, and delete players. Associate players with their golf bags.
+- **Retrieve Leaderboards**: Access leaderboards for top-rated and most played clubs in a specific bag.
 
-1. Click the `Use this template` button above to create a new repository from this template.
+## API Specification
 
-2. Go to the settings for your repository at `https://github.com/{github-username}/{repository-name}/settings` and enable GitHub Pages.
+The API is documented using the OpenAPI (Swagger) specification. You can view the detailed API documentation at:
 
-    ![Headers](/screenshots/swagger-github-pages.png?raw=true)
-    
-3. Browse to the Swagger documentation at `https://{github-username}.github.io/{repository-name}/`.
+[https://mattcsn.github.io/joka-api-doc/]([https://your-github-pages-url.com](https://mattcsn.github.io/joka-api-doc/))
 
+## Getting Started
 
-## Steps to manually configure in your own repository
+### Prerequisites
 
-1. Download the latest stable release of the Swagger UI [here](https://github.com/swagger-api/swagger-ui/releases).
+No special prerequisites are required. You can explore the API documentation directly in your browser.
 
-2. Extract the contents and copy the "dist" directory to the root of your repository.
+### Using the API
 
-3. Move the file "index.html" from the directory "dist" to the root of your repository.
-    ```
-    mv dist/index.html .
-    ```
-    
-4. Copy the YAML specification file for your API to the root of your repository.
+1. **Explore Endpoints**: Navigate to the documentation to explore available endpoints, request formats, and responses.
+2. **Interact with the API**: Use the API documentation to understand the request and response structure. You can use tools like Postman or cURL to test the endpoints.
+3. **Review Examples**: Each endpoint includes example requests and responses to guide you in making correct API calls.
 
-5. Edit [dist/swagger-initializer.js](dist/swagger-initializer.js) and change the `url` property to reference your local YAML file. 
-    ```javascript
-        window.ui = SwaggerUIBundle({
-            url: "swagger.yaml",
-        ...
-    ```
-    Then fix any references to files in the "dist" directory.
-    ```html
-    ...
-    <link rel="stylesheet" type="text/css" href="dist/swagger-ui.css" >
-    <link rel="icon" type="image/png" href="dist/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="dist/favicon-16x16.png" sizes="16x16" />    
-    ...
-    <script src="dist/swagger-ui-bundle.js"> </script>
-    <script src="dist/swagger-ui-standalone-preset.js"> </script>    
-    ...
-    ```
-    
-6. Go to the settings for your repository at `https://github.com/{github-username}/{repository-name}/settings` and enable GitHub Pages.
+## Directory Structure
 
-    ![Headers](/screenshots/swagger-github-pages.png?raw=true)
-    
-7. Browse to the Swagger documentation at `https://{github-username}.github.io/{repository-name}/`.
+- `index.html`: The main entry point of the Swagger UI documentation.
+- `swagger.yaml`: The OpenAPI specification file describing the API.
+- `assets/`: Contains static assets for the documentation, such as images and styles.
 
-   The example API specification used by this repository can be seen hosted at [https://peter-evans.github.io/swagger-github-pages](https://peter-evans.github.io/swagger-github-pages/).
+## Contributing
+
+If you wish to contribute to the documentation or API, please follow these guidelines:
+
+1. **Fork the Repository**: Create a personal fork of the repository.
+2. **Create a Branch**: Develop your changes in a separate branch.
+3. **Submit a Pull Request**: Once your changes are complete, submit a pull request for review.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please contact us at [support@joka-app.com](mailto:support@joka-app.com).
+
+---
+
+Happy golfing!
