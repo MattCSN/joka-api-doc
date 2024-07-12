@@ -15,7 +15,7 @@ The Joka API allows you to perform the following operations:
 
 The API is documented using the OpenAPI (Swagger) specification. You can view the detailed API documentation at:
 
-[https://mattcsn.github.io/joka-api-doc/]([https://your-github-pages-url.com](https://mattcsn.github.io/joka-api-doc/))
+[https://mattcsn.github.io/joka-api-doc/]((https://mattcsn.github.io/joka-api-doc/))
 
 ## Getting Started
 
